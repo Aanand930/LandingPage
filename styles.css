@@ -1,0 +1,750 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFirstFont,Helvetica,sans-serif;  
+}
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(./NerisFreeWeigths/Neris-Light.otf);
+    
+  }
+  body{
+    max-width: 100%;
+    font-family: myFirstFont,Helvetica,sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/*----------------------------     HEADER     ------------------------- */
+
+
+#zomato-top{
+    width: 100%;
+    height: 65vh;   
+    object-fit: cover;
+    
+}
+
+.toplevel-container
+{
+    position:absolute;
+    width: 100%;
+    top: 5%;
+    height: 65vh;
+}
+
+#navigation
+{
+    display: flex;
+    justify-content: space-around;
+
+}
+#login
+{
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background: white;
+    
+}
+
+.btn> a{
+    color: rgb(245, 112, 130);
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+#logo{
+    width: 40%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10vh;
+    
+    
+}
+
+.toplevel-container > h2{
+    color:white;
+    text-align: center;
+    margin-top: 4vh;
+    font-size: 2.5rem;
+    font-weight: 150;
+}
+
+#search-bar{
+    width: 50%;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    top: 0%;
+
+    background: white;
+}
+
+.location-change
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.location-change svg{
+    margin-top: 10px;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+.border
+{
+    margin-left: 10px;
+    width: 0rem;
+    height: 2rem;
+    border: 0.05rem solid rgb(207, 207, 207);
+}
+
+
+.location-change  input{
+    color:gray;
+    margin-left: 10px;
+    font-weight: 150;
+    text-align: center;
+    outline: none;
+    width: 100%;
+    border: none;
+}
+
+.search-type{
+    display: flex;
+    width: 100%;
+    
+    padding: 15px;
+}
+
+
+.search-type > input{
+    background: transparent;
+    outline: none;
+    border: none;
+    margin-left: 15px;
+    width: 100%;
+}
+
+
+
+
+/* -------------------------------------------- */
+
+
+
+
+
+/*---------------    MAIN    ------------------- */
+
+main{
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    position: relative;
+    
+}
+
+.top{
+    margin: 80px auto;
+    width: 100%;
+    height: 30vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    gap: 15px;
+}
+.cards{
+    
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 100%;
+    border: 1px solid lightgray;
+    align-content: center;
+    overflow: hidden;
+    transition: all 1s ease-out;
+}
+
+.cards a > h2{
+ color:rgb(54, 54, 54);
+ font-size: 1.2rem;
+ line-height: 1.2rem;
+ font-weight: 100;
+ text-align: center;
+}
+.cards  a > img{
+    
+    width: 100%;
+        
+    height:85%;
+    object-fit: cover;
+}
+.cards:hover{
+    
+    transform: scale(1.05);
+    
+}
+
+.collections{
+    
+    width: 100%;
+    margin: 80px auto;
+}
+.collections > h2{
+    font-size: 2.6rem;
+    line-height: 1;
+    font-style: normal;
+}
+
+.coll-heading{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coll-heading > h3{
+    line-height: 1.4;
+    font-weight: 300;
+    color: rgb(54, 54, 54);
+}
+.coll-heading div >a{
+    color: rgb(245, 112, 130);
+}
+
+
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+
+
+
+.container  a{
+    color: white;
+    max-width: 23%;
+}
+.container a > img{
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    
+    
+}
+
+.container a > div 
+{
+    position: relative;
+    bottom: 50px;
+    left: 2rem;
+}
+.collections + h1{
+    text-align: center;
+    font-weight: 100;
+}
+
+.localities{
+    width: 100%;
+    margin: 50px auto;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(10,1fr);
+}
+
+.localities div > a{
+    margin:0;
+    align-self: center;
+}
+
+
+.localities div{
+    width: 80%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    height: 60px;
+    margin:0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+
+}
+.localities div > a > h2{
+    color: black;
+    font-weight: 90;
+    text-align: center;
+    
+
+}
+
+/* -----------------------------------------------------*/
+
+
+
+/*---------------------    FOOTER    -------------------*/
+
+
+
+footer{
+    background: rgb(248, 248, 248);
+    margin-top: 10%;
+}
+
+#content {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.level-1{
+    width: 100%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.level-1 >div > img
+{
+    
+    height: auto;
+    object-fit: cover;    
+}
+
+.menu
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.outerlayer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    background: white;
+    color:black;
+    margin-left: 10%;
+}
+
+.outerlayer >svg{
+    margin-right: 10px;
+}
+
+.outerlayer > i{
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin-left: 2%;
+}
+.dropdown-content
+{
+    
+    width: 200px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 3;
+    right: 30px;
+    bottom: 0;
+    display: none;
+}
+
+
+.dropdown-content > ul{
+    list-style-type: none;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.outerlayer:hover .dropdown-content
+{
+    display: block;
+     
+}
+
+.dropdown-content >ul li{
+    padding:10px;
+}
+
+.level-2{
+    margin-top: 5%;
+    display: flex;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+    margin-bottom: 3%;
+}
+
+.level-2 ul{
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    margin: 0px 0px 1.2rem;
+    list-style-type: none;
+    color: rgb(105, 105, 105);
+}
+
+.level-2 li{
+    margin-bottom: 5%;
+
+}
+
+.part1> ul > li:first-child
+{
+    font-weight: 800;
+    color:black;
+    margin-bottom: 5%;
+}
+.part2> ul > li:first-child
+{
+    color:black;
+    margin-bottom: 5%;
+    font-weight: 800;
+}
+.part3> ul > li:first-child
+{
+    font-weight: 800;
+
+    margin-bottom: 5%;
+    color:black;
+}
+.part4> ul > li:first-child
+{
+    font-weight: 800;
+    margin-bottom: 5%;
+    color:black;
+}
+
+
+#social-links
+{
+    margin: 5% 0;
+    display: flex;
+    
+}
+#social-links a{
+    margin-right: 3%;
+    width: 50px;
+}
+
+.store-download
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.store-download  img
+{
+    width: 150px;
+    margin-bottom: 5%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+hr + p{
+    color: rgb(105, 105, 105);
+    padding-bottom: 5%;
+}
+
+#footer-logo
+{
+    display: none;
+}
+
+
+/*-----------------------------------------------------------*/
+
+
+
+
+/*RESPONSIVE WEB DESIGN RULES */
+
+@media (max-width : 640px)
+{
+
+
+
+#logo
+{
+    position: relative;    
+    width: 50%;
+}
+#gettheapp
+{
+    display: none;
+}
+#login
+{
+    margin: 0 auto;
+}
+
+#login > a
+{
+background: white;
+color: red;
+border-radius: 10px;
+width: 75px;
+height: 30px;
+
+}
+
+#logo +h2
+{
+    font-size: 2.2rem;
+}
+#search-bar
+{
+    display: none;
+}
+
+.collections,.coll-heading,.container{
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    place-items: center;
+    margin-top: 30%;
+    height: 65%;
+}
+
+
+.cards{
+    margin: 0 auto;
+    height: 300px;
+    margin-top: 20px;
+}
+
+
+
+.container{
+    display: grid;
+    place-items: center;
+    grid-template-rows:repeat(4,1fr);
+    grid-template-columns: 1fr;
+    
+}
+
+.container a > div
+{
+    bottom: 65px;
+}
+
+
+.container a > div h4
+{
+    font-size: 1.2rem;
+}
+
+.container a > div  h6
+{
+    font-size: 0.8rem;
+}
+
+.collections > h2
+{
+    margin-bottom: 10px;
+}
+
+.localities
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(15,1fr);
+}
+
+.localities div
+{
+    width: 100%;
+}
+
+
+.localities div > a > h2
+{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+#content
+{
+    width: 70%;
+    height: 22vh;
+}
+
+
+.level-1,.part1,.part2,.part3,.part4{
+    display: none;
+}
+.collections > h2,.coll-heading> h3
+{
+    margin-bottom: 10px;
+}
+
+#footer-logo
+{
+    display: block;
+    text-align: center;   
+}
+
+
+
+#footer-logo > img
+{
+    margin-top: 10px;
+    color: black;
+}
+.store-download
+{
+    position: absolute;
+    bottom: 40%;
+    left: 33%;
+}
+
+.level-2{
+    display: block;
+}
+.part5
+{
+margin: 0 auto;
+}
+
+.part5> p
+{
+text-align: center;
+}
+
+#social-links
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#social-links > a
+{
+    text-align: center;
+    width: 50px;
+}
+
+
+hr + p
+{
+    display: none;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --------- MEDIUM SIZES (>641px) --------- */
+
+@media all and (min-width : 641px) and (max-width : 1024px)
+{
+
+.collections > h2
+{
+    
+    margin-bottom: 10px;
+}
+
+.coll-heading
+{
+    display: -webkit-inline-flex;
+}
+.coll-heading > h3
+{
+    margin: 10px auto;
+}
+
+.container{
+    display: flex;
+    place-items: center;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    
+    
+}
+
+.container a > div
+{
+    bottom: 65px;
+}
+
+
+.container a > div h4
+{
+    font-size:medium;
+}
+
+.container a > div  h6
+{
+    font-size: 0.6rem;
+}
+
+.localities div > a > h2{
+    font-size: 1rem;
+    
+
+}
+
+#content
+{
+    width: 75%;
+}
+ .level-2{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+} 
+
+#social-links a{
+ width: 50px;   
+}
+
+.store-download img{
+    width: 150px;
+}
+
+}
+
